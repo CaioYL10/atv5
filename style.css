@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+
+    height: 120vh;
+
+    grid-template-rows: 1fr 2fr 6fr 1fr;
+
+    grid-template-areas: 
+    "nav"
+    "section"
+    "main"
+    "footer";
+}
+
+.nav {
+    grid-area: nav;
+    background: linear-gradient(to right, rgb(2, 2, 190), blue, rgb(2, 2, 190));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    color: white;
+    gap: 20px;
+}
+
+nav li {
+    cursor: pointer;
+    transition: all 1s;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav button {
+    width: 8%;
+    height: 38%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #58B5B1;
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav .logo {
+    width: 15%;
+}
+
+.section {
+    grid-area: section;
+    background-image: url(img/Captura\ de\ tela\ 2025-09-05\ 113345.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.main {
+    grid-area: main;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tmnbanner {
+    width: 20%;
+    height: 75%;
+    transition: all 1s;
+}
+
+.alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.gj {
+    width: 70%;
+    height: 70px;
+    background-color: #1dfff4;
+    border: 0;
+    border-radius: 25px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 8%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav li:hover {
+    font-size: 1.1rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+nav button:hover {
+    box-shadow: 0 0 20px #EE4A23;
+}
+
+.tmnbanner:hover {
+    box-shadow: 0 0 100px #00fff2;
+}
+
+.gj:hover {
+    box-shadow: 0 0 100px #002aff;
+    color: white;
+    background-color: rgb(2, 2, 206);
+}
+
+@media (max-width:768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container {
+        height: 130vh;
+        grid-template-rows: 1fr 2fr 7fr 1fr;
+
+        grid-template-areas: 
+        "nav"
+        "section"
+        "main"
+        "footer";
+    }
+
+    .tmnbanner {
+        height: 50%;
+        width: 190px;
+    }
+
+    .alt {
+        font-size: 14px;
+    }
+
+    nav button {
+        width: 15%;
+    }
+}
